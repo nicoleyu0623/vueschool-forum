@@ -1,4 +1,11 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+const forumApp = createApp(App)
+
+// use component
+forumApp.component('Nice-button', {}) // name, component
+
+// use plugin
+// forumApp.use(SomePlugin)
+forumApp.mount('#app')
