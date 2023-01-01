@@ -1,39 +1,24 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <div v-for="thread in threads" :key="thread.id">
-      <h2>{{ thread.title }}</h2>
-      <div v-for="postid in thread.posts" :key="postid">
-        <p>{{ getPostById(postid).text }}</p>
-        <p>{{ getUserById(getPostById(postid).userId).name }}</p>
-      </div>
-    </div>
-
-    <div class="post"
-         v-for="postId in threads.posts" :key="postId">
-
-    </div>
-
-  </div>
+<h2>hello world component</h2>
 </template>
 
 <script setup>
 
-import sourceData from '@/data.json'
-import {reactive} from 'vue' // ref
-// reactive could only be used in arrays or objects
-
-const threads = reactive(sourceData.threads)
-const posts = reactive(sourceData.posts)
-const users = reactive(sourceData.users)
-
-function getPostById(postId) {
-  return posts.find(p => p.id === postId)
-}
-
-function getUserById(userId) {
-  return users.find(p => p.id === userId)
-}
+// import sourceData from '@/data.json'
+// import {reactive} from 'vue' // ref
+// // reactive could only be used in arrays or objects
+//
+// const threads = reactive(sourceData.threads)
+// const posts = reactive(sourceData.posts)
+// const users = reactive(sourceData.users)
+//
+// function getPostById(postId) {
+//   return posts.find(p => p.id === postId)
+// }
+//
+// function getUserById(userId) {
+//   return users.find(p => p.id === userId)
+// }
 
 </script>
 
