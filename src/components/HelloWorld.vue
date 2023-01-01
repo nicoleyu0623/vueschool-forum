@@ -8,6 +8,12 @@
         <p>{{ getUserById(getPostById(postid).userId).name }}</p>
       </div>
     </div>
+
+    <div class="post"
+         v-for="postId in threads.posts" :key="postId">
+
+    </div>
+
   </div>
 </template>
 

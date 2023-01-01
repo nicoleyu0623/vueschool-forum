@@ -1,4 +1,5 @@
-import { createApp } from 'vue'
+import { createApp, Vue } from 'vue'
+
 import App from './App.vue'
 
 const forumApp = createApp(App)
